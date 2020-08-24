@@ -37,7 +37,8 @@ echo "</rss>\n";
 
 } else if($config=='directories' ){
 $path= '../outputFiles/features/';
-
+$directory = $path;
+$scanned_directory = array_diff(scandir($directory), array('..', '.'));
 echo "<rss version='2.0' xmlns:atom='http://www.w3.org/2005/Atom'>\n";
 echo "<channel>\n";
 
